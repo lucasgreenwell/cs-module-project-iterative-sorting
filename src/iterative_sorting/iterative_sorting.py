@@ -8,9 +8,22 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
 
+        #looping through the rest of the list after the current index
+        for j in range(cur_index + 1, len(arr)):
+            #if the item we're currently looking at is less than the smallest one we saw earlier
+            if arr[j] < arr[smallest_index]:
+                #reset that shit so it makes sense again
+                smallest_index = j
+            # TO-DO: swap
+            # Your code here
 
-        # TO-DO: swap
-        # Your code here
+            # crazy python list magic, creates a tuple and then pulls it out into these two variables. Switching these variables is the real sorting that's going on.
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
+    return arr
+
+
+
+
 
     return arr
 
