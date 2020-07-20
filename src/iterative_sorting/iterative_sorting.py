@@ -19,21 +19,26 @@ def selection_sort(arr):
 
             # crazy python list magic, creates a tuple and then pulls it out into these two variables. Switching these variables is the real sorting that's going on.
         arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
+    #when you're  finally done with all your looping fun
     return arr
 
-
-
-
-
-    return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
-
-
+    #start at the end
+    current_index = len(arr)
+    #loop through all that jazz except the last one
+    for index in range(current_index - 1):
+        #loop through everything except the last one or the first one
+        for compare in range(0, current_index - index - 1):
+            #find out who's bigger
+            if arr[compare] > arr[compare + 1]:
+                # and then put the big guy at the back.
+                arr[compare], arr[compare + 1] = arr[compare + 1], arr[compare]
+    # after you do that a shitload of times, you're done
     return arr
+
 
 '''
 STRETCH: implement the Counting Sort function below
